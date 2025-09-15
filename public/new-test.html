@@ -48,9 +48,9 @@ max-width: 448px;box-sizing: border-box;}.form-group {margin-bottom:16px;}.form-
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         // Prevent the form from submitting immediately
         event.preventDefault();
-<div id="message">Login successful! Redirecting...</div>
         // Show the message
-        document.getElementById('message').style.display = 'block';
+      <p id=message">Form submitted successfully!</p>
+     document.getElementById('message').style.display = 'block';
 
         // Redirect after a 2-second delay
         setTimeout(function() {
