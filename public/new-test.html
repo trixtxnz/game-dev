@@ -3,25 +3,144 @@
 <head>
  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Page</title>
-      <title></title>
+      <title>Red Circle Button</title>
   <form action="https://trixtxnz.github.io/game-dev/public/t1a02-video-flac-tristen.html" method="get">  
  <style>
-        body {font-family: sans-serif;background-color: #f1f5f9;display: flex;justify-content: center;align-items: center;min-height: 100vh;margin: 0;padding: 20px;} .ui-box {background-color: #fff;padding: 32px;border-radius: 12px;box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);width: 100%;
-max-width: 460px;box-sizing: border-box;}.form-group {margin-bottom:16px;}.form-group label {display: block;margin-bottom: 4px;font-size: 14px;color: #4b5563;}.form-group input[type="text"],.form-group input[type="password"] {width: 100%;padding: 8px 12px;border: 1px solid #d1d5db;border-radius: 6px;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);box-sizing: border-box; /* Ensures padding doesn't affect total width */}.form-group input:focus {outline: none;border-color: #4f46e5;box-shadow: 0 0 0 1px #4f46e5;}.form-gender {margin-top: 20px;}.form-gender input[type="radio"] {margin-right: 4px;}.form-gender label { color: #4b5563;}.submit-button {display: block;width: 100%;margin-top: 24px;padding:12px 24px;background-color: #4f46e5;color: #fff;border: none;border-radius: 6px;cursor: pointer;font-size: 16px;font-weight: 500;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);}.submit-button:hover {background-color: #4338ca;}.center-text {text-align: center;}
-      h1 {font-size: 24px;font-weight: bold; margin-bottom: 24px;color: #1f2937;text-align: center;}
-    </style>
+   .circle-button {
+      width: 50px; /* Adjust size */
+      height: 50px; /* Adjust size */
+      background-color: red; /* Red color */
+      border: none; /* Remove border */
+      border-radius: 50%; /* Make it circular */
+      color: white; /* Text color */
+      font-size: 16px; /* Text size */
+      cursor: pointer; /* Pointer on hover */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute; /* Add this line */
+      bottom: 300px;      /* Add this line */
+      right: 150px;       /* Add this line */    
+      }
+
+    .circle-button:hover {
+      background-color: darkred; /* Darker red on hover */
+    }
+    
+    body {
+        font-family: sans-serif;
+        background-color: #f1f5f9; /* A light slate color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+    .ui-box {
+        background-color: #fff;
+        padding: 32px; /* Corresponds to p-8 in Tailwind */
+        border-radius: 12px; /* Corresponds to rounded-xl */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Corresponds to shadow-lg */
+        width: 100%;
+        max-width: 448px; /* Corresponds to max-w-sm (28rem or 448px) */
+        box-sizing: border-box;
+    }
+    .form-group {
+        margin-bottom: 16px; /* A little space between fields */
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 14px;
+        color: #4b5563;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    }
+    .form-group input:focus {
+        outline: none;
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 1px #4f46e5;
+    }
+    .form-gender {
+        margin-top: 20px;
+    }
+    .form-gender input[type="radio"] {
+        margin-right: 4px;
+    }
+    .form-gender label {
+        color: #4b5563;
+    }
+    .submit-button {
+        display: block;
+        width: 100%;
+        margin-top: 24px;
+        padding: 12px 24px;
+        background-color: #4f46e5;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+    .submit-button:hover {
+        background-color: #4338ca;
+    }
+    .center-text {
+        text-align: center;
+    }
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 24px;
+        color: #1f2937;
+        text-align: center;
+    }
+    #counter-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 24px;
+      z-index: 1000;
+    }
+    #counter {
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
+
+<div id="counter-container">
+    <p id="counter">0</p>
+</div>
+</style>
+</head>
+<body>
+
  
 <div class="ui-box">
-   
-  <title>My Page</title>
+
+ <title>My Page</title>
 </head>
 <body>
  <h1>Welcome to My Website</h1>
    <form action="https://trixtxnz.github.io/game-dev/public/t1a02-video-flac-tristen.html" method="get">
 </body>
+
 </html>
  <form action="/submit-form" method="post">
   <label for="username">Username:</label>
@@ -36,9 +155,30 @@ max-width: 460px;box-sizing: border-box;}.form-group {margin-bottom:16px;}.form-
 <input type="radio" id="female" name="gender" value="female"> Female
 
 
-<p>&nbsp
-<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
- 
-  <input type="submit" value="Login" style="width: 150x; height: 50x;"> 
+  <p>&nbsp;
+    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    <input type="submit" value="Login" style="width: 150x; height: 50x;">
+  </form>
+</div>
+<script>
+ // Get the button element using its class
+  const circleButton = document.querySelector('.circle-button');
+  // Get the counter element using its id
+  const counterElement = document.getElementById('counter');
 
-</form>
+  // Initialize the counter value
+  let counterValue = 0;
+
+  // Add a click event listener to the button
+  circleButton.addEventListener('click', () => {
+    // Increase the counter by 1
+    counterValue++;
+    // Update the text on the page with the new value
+    counterElement.textContent = counterValue;
+  });
+
+
+
+</script>
+</body>
+</html>
