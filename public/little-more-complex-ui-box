@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fred</title>
+<style>
+  body {
+    font-family:sans-serif;
+    background-color: #FF6961;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+ 
+  	.ui-box {
+      background-color: #0000FF;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 448px;
+      box-sizing: border-box;
+      text-align: center;
+  } 
+
+  .ui-box2, .ui-box3, .ui-box4 {
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 448px;
+      box-sizing: border-box;
+      text-align: center;
+      margin-top: 16px;
+      position: relative;
+    }
+
+    .ui-box2 {
+      background-color: #008000;
+    }
+
+    .ui-box3 {
+      background-color: #FFF;
+    }
+
+    .ui-box4 {
+      background-color: yellow;
+    }
+</style>
+   <div class="ui-box">
+  <h1 align=center><b style="color:red;text-shadow: -1px -1px 0 green, 1px -1px 0 purple, -1px 1px 0 white, 1px 1px 0 green; color:">title>t1a06-css-fred</b></h1>
+     
+<div class="ui-box3">
+dgndbb
+     </div> 
+
+<div class="ui-box2">
+ sgsssb
+	</div>
+     
+<div class="ui-box4">
+  ssgsg
