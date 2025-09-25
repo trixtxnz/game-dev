@@ -1,0 +1,35 @@
+.bounds {
+  border: 5px red solid;
+  width: 200px;
+  height: 300px;
+}
+
+@keyframes hor-movement {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+@keyframes ver-movement {
+  from {
+    margin-top: 0%;
+  }
+  to {
+    margin-top: 100%;
+  }
+}
+
+.image {
+  animation-name: hor-movement, ver-movement;
+  animation-duration: 3.141s, 1.414s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+<div class="bounds">
+  <img class="image" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/279/thinking-face_1f914.png"> </img>
+</div>
+</div>
