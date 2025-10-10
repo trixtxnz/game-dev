@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clicker Game</title>
+<style>
+body {
+  font-family: sans-serif;
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#secondButton {
+  display: none;
+}
+
+#thirdButton {
+  display: none;
+}
+
+#fourthButton {
+    display: none;
+    position: absolute;
+    top: 50%;
+}
+  
+</style>
+</head>
+<body bgcolor=yellow>
+
+
+  <h1 align center> t1a03-list-table-and-events-tristen.html</h1>
+  <h3>tables</h3>
+  <table border=0>
+    <tr><td><input type="button" value="Click me" id="hoverButton" onmouseover="(this.style.backgroundColor='green')"onmouseout="(this.style.backgroundColor='gray')"></td><td><input type="button" value="I appear! but why do i do" id="secondButton" onmouseover="(this.style.backgroundColor='purple')"onmouseout="(this.style.backgroundColor='gray')"></td></tr>
+    <tr><td><input type="button" value="why did you click again" id="fourthButton"onmouseover="(this.style.backgroundColor='red')"onmouseout="(this.style.backgroundColor='green')" onclick="mb()"></td><td><input type="button" value="hi" id="thirdButton"onmouseover="(this.style.backgroundColor='blue')"onmouseout="(this.style.backgroundColor='gray')"></td></tr>
+  </table><br>
+  <h3>lists</h3>
+  <ol>an ordered list of planets
+    <li>mercury
+    <li>earth
+      </ol>
+      <ul> an ordered unordered list of dogs
+        <li>pug
+        <li>poodle
+        </ul>
+<script>
+document.getElementById('hoverButton').addEventListener('click', function() {
+  document.getElementById('secondButton').style.display = 'inline-block';
+  });
+  document.getElementById('secondButton').addEventListener('click', function() {
+    document.getElementById('thirdButton').style.display = 'inline-block';
+    });
+    document.getElementById('thirdButton').addEventListener('click', function() {
+      document.getElementById('fourthButton').style.display = 'inline-block';
+      });
+  function mb() {
+    const element = document.getElementById("fourthButton");
+    button.style.top = Math.random() * 300 + "px";
+    button.style.left = Math.random() * 300 + "px";
+  }
+</script>
+</body>
+</html>
