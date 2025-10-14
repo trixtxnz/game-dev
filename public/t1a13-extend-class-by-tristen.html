@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Class Example</title>
+</head>
+<body>
+    <script>
+        class myAnimal {
+            constructor(passName, passAge, species) {
+                this.myName = passName;
+                this.myAge = passAge;
+                this.species = species;
+            }
+            myShow() {
+                document.getElementById("myDiv01").innerHTML = 
+                    `Hello, my name is ${this.myName}, I am a ${this.species} and I am ${this.myAge} years old.<br>`;
+            }
+
+            compareAge(otherAnimal) {
+                if (this.myAge > otherAnimal.myAge) {
+                    return `${this.myName} is older than ${otherAnimal.myName}.`;
+                } else if (this.myAge < otherAnimal.myAge) {
+                    return `${otherAnimal.myName} is older than ${this.myName}.`;
+                } else {
+                    return `${this.myName} and ${otherAnimal.myName} are the same age.`;
+                }
+            }
+            static numberOfLegs() {
+                return 4; // Assuming all common pets have 4 legs
+            }
+        } // end class myAnimal
+    </script>
+    <h2 align="center">t1a13-extend-class-by-tristen.html</h2>
+    <h4>example working class code</h4>
+    <input type="button" value="Set and show a class animal" onclick="{
+        myDog = new myAnimal('Snickers', 10, 'dog');
+        myDog.myShow();
+        document.getElementById('myDiv01').innerHTML += `Typical number of legs: ${myAnimal.numberOfLegs()}<br>`;
+    }">
+
+    <h4>example extending class code</h4>
+    <input type="text" id="myText01" value="useless at the moment"> <br>
+    <input type="button" value="Example extended class animal" onclick="{
+        class myCat extends myAnimal {
+            myShow() {
+                document.getElementById('myDiv01').innerHTML = 
+                    `Hello! I am ${this.myName}, a ${this.species}, and I am ${this.myAge} years old.<br>`;
+            }
+        } // end extended class myCat
+        myPet1 = new myCat('Fluffy', 14, 'cat');
+        myPet1.myShow();
+        // Create another animal for comparison
+        myPet2 = new myAnimal('Snickers', 10, 'dog');
+        let comparisonResult = myPet1.compareAge(myPet2);
+        document.getElementById('myDiv01').innerHTML += comparisonResult + '<br>';
+    }">
+    <div id="myDiv01">Here you go</div>
+</body>
+</html>
