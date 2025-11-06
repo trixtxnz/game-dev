@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crown Animation</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #FFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .text {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 30px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 800;
+      transform: translate(-50%, -50%);
+      color: #FFD700;
+    }
+    button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background: #FFD700;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #FFC700;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="startCrown()">Draw Crown</button>
+  <h1 class="text" id="text"><b>👑</b></h1>
+
+  <script>
+    const text = document.getElementById('text');
+    let t = 0;
+
+    function startCrown() {
+      t = 0;
+      animate();
+    }
+
+    function animate() {
+      const cx = window.innerWidth / 2;
+      const cy = window.innerHeight / 2;
+      
+      // Crown points: 3 peaks
+      const points = [[0,2], [1,0], [2,2], [3,0], [4,2], [5,0], [6,2]];
+      const i = Math.floor(t) % points.length;
+      const next = (i + 1) % points.length;
+      const p = t % 1;
+      
+      const x = cx + (points[i][0] + (points[next][0] - points[i][0]) * p - 3) * 30;
+      const y = cy + (points[i][1] + (points[next][1] - points[i][1]) * p - 1) * 30;
+      
+      text.style.left = x + 'px';
+      text.style.top = y + 'px';
+      
+      t += 0.05;
+      requestAnimationFrame(animate);
+    }
+  </script>
+</body>
+</html>
